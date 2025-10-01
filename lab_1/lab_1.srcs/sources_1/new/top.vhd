@@ -12,20 +12,17 @@ entity top is
            DA_LRCK : out STD_LOGIC;
            DA_SCLK : out STD_LOGIC;
            DA_SDIN : out STD_LOGIC);
-end top;
+end top; 
 
 architecture Behavioral of top is
 
-begin
-    
-    main : process(clk100mhz)
-    begin
-    if rising_edge(clk100mhz) then
-        AD_MCLK <= '1';
-    else
-        AD_MCLK <= '0';
-    end if;
-    end process;
+signal counter_reg : std_logic_vector (5 downto 0);
 
+begin
+
+    bin_counter : process(clk100mhz)
+    begin
+    
+    end process;
 
 end Behavioral;

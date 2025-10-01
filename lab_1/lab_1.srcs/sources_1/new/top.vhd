@@ -20,7 +20,11 @@ begin
     
     main : process(clk100mhz)
     begin
-        
+    if rising_edge(clk100mhz) then
+        AD_MCLK <= '1';
+    else
+        AD_MCLK <= '0';
+    end if;
     end process;
 
 
